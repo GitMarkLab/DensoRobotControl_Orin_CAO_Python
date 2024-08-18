@@ -39,6 +39,8 @@ IO_25 = ctrl.AddVariable("IO25", "")
 IO_25.Value = 1 # Set HIGH
 IO_25.Value = 0 # Set LOW
 
+current_position = Arm1.AddVariable("@Current_Position","")
+print(current_position) #(680.2056884765625, -161.53814697265625, 308.7040710449219, 0.0, 0.0, 33.91001510620117, 1.0)
 
 
 
