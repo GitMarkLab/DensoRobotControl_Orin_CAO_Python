@@ -17,3 +17,4 @@ My robot setup is the following:
 
 
 
+![Screenshot from 2024-08-18 17-55-15](https://github.com/user-attachments/assets/95aa11a2-d964-42fd-9590-7cd02b1fe5c4)
