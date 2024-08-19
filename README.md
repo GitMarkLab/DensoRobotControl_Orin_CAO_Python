@@ -4,7 +4,7 @@ If you want to control it via python there are two possibilities based on ORIN2
 - CAO Engine (only on Windows, compatible to older controller firmware ( i think down to 2.3)
     https://support.densorobotics.com/support/solutions/articles/60000698635-orin-2-programming-in-python-2-7-3-cao-engine-
     After ORIN installation in C:\ORiN2\CAO\Samples
-- p-cap (Linux compatible, controller firmware must be higher than 2.9)
+- p-cap 
 - p-cap Links
 -   https://github.com/ShoheiKobata/orin_bcap_python_samples/tree/master
 -   https://github.com/DENSORobot/orin_bcap/tree/master
