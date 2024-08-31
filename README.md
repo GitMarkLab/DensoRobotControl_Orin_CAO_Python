@@ -1,7 +1,7 @@
 # DensoRobotControl_Orin_CAO_Python
 There are several ways to control a denso robot.
 If you want to control it via python there are two possibilities based on ORIN2
-- CAO Engine (only on Windows, compatible to older controller firmware)
+- CAO Engine (only on Windows, compatible to older controller firmware >= 2.8)
     https://support.densorobotics.com/support/solutions/articles/60000698635-orin-2-programming-in-python-2-7-3-cao-engine-
     After ORIN installation in C:\ORiN2\CAO\Samples
 - p-cap (only in c available for RC7 controllers)
