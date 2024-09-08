@@ -42,7 +42,7 @@ IO_25.Value = 0 # Set LOW
 current_position = Arm1.AddVariable("@Current_Position","")
 print(current_position) #(680.2056884765625, -161.53814697265625, 308.7040710449219, 0.0, 0.0, 33.91001510620117, 1.0)
 
-
+Arm1.Execute("ExtSpeed", [3,10,10]) #Param = [Speed, Accel, Decel]
 
 # --- Robot Movement ---
 # bcap analogy
@@ -57,6 +57,10 @@ print(current_position) #(680.2056884765625, -161.53814697265625, 308.7040710449
 #----> Pose = "@P P1"
 # m_bcapclient.robot_move(HRobot, Comp, Pose, "SPEED=F2,NEXT")
 
+
+# @P Point grind over 
+# @E exact movement to the target
+# SPEED=80 means x% of ExtSpeed
 Arm1.Move(1, "@P P1", "NEXT")
 Arm1.Move(1, "@P P1", "SPEED=80,NEXT") #kombination
 Arm1.Move(1, "@P P2", "")
@@ -66,7 +70,7 @@ Arm1.Move(1, "@P P(414.0000, -30.0000, 305.0000, -60.00000, 1,1 )", "SPEED=80")
 
 Arm1.Execute("Approach", [1, "P1", "@P 6"]) 
 
-Arm1.Execute("ExtSpeed", [3,10,10]) #Param = [Speed, Accel, Decel]
+
 
 Arm1.Execute("GiveArm", )
 Arm1.Execute("Motor", [0,0]) #Motor aus
