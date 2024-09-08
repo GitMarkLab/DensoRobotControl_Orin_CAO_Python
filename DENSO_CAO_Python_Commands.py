@@ -32,7 +32,22 @@ task1 = ctrl.AddTask("RobSlave", "")
 task1.start(1) 
 
 Arm1.Execute("TakeArm", 0)
-Arm1.Execute("Motor", [1,0]) #Motor an
+#Arm1.Execute("Motor", [1,0]) #Motor an
+
+try:
+    Arm1.Execute("Motor", [1,1])  # Motor aus
+    print("Motor wurde erfolgreich ausgeschaltet.")
+except Exception as e:
+    print(f"Es ist ein Fehler aufgetreten: {e}")
+    # Timeout-Fehler spezifisch abfangen
+    time.sleep(3)
+
+    if "Timeout occurred" in str(e):
+        print("Ein Timeout ist aufgetreten.")
+    else:
+        print("Ein anderer Fehler ist aufgetreten.")
+
+
 
 # Set/GET MINI IO port
 IO_25 = ctrl.AddVariable("IO25", "")
@@ -58,12 +73,17 @@ Arm1.Execute("ExtSpeed", [3,10,10]) #Param = [Speed, Accel, Decel]
 # m_bcapclient.robot_move(HRobot, Comp, Pose, "SPEED=F2,NEXT")
 
 
+# Arm1.Move([Interpolation], "[Targeting Position] [Position]", [Options])
+# Interpolation 
+# 1= Move P (PtP)
+# 2= Move L (Linear)
 # @P Point grind over 
 # @E exact movement to the target
 # SPEED=80 means x% of ExtSpeed
 Arm1.Move(1, "@P P1", "NEXT")
 Arm1.Move(1, "@P P1", "SPEED=80,NEXT") #kombination
 Arm1.Move(1, "@P P2", "")
+Arm1.Move(2, "@P P2", "")
 
 # X 414.5373 , Y -30.7000, Z 305.9200, T -60.31251, RL Lefty ,Fig 1
 Arm1.Move(1, "@P P(414.0000, -30.0000, 305.0000, -60.00000, 1,1 )", "SPEED=80")
