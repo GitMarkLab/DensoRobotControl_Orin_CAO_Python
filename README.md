@@ -18,3 +18,6 @@ My robot setup is the following:
 
 
 ![Screenshot from 2024-08-18 17-55-15](https://github.com/user-attachments/assets/95aa11a2-d964-42fd-9590-7cd02b1fe5c4)
+
+I would be very happy to know if you use the lib and what you do with it!
+just write to me!
